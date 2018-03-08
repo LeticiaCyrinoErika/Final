@@ -1,0 +1,37 @@
+
+public abstract class Arma  implements IComportamentoArma  {
+	protected static String nome;
+	protected int danoMax;
+	protected int durabilidade;
+	private static boolean maoDireita;
+	private boolean maoEsquerda;
+	
+	Arma (String nome, int danoMax, int durabilidade, boolean maoDireita, boolean maoEsquerda){
+		
+	}
+		public abstract int atacar();
+			
+		
+		public abstract String usarArma();
+			
+		public String examinar(){
+			return (danoMax+"-"+durabilidade);
+		}
+		public abstract boolean usaApenasUmaMao(); 
+		
+		
+		public static boolean getMaoDireita(){
+			return true;
+		}
+		public static boolean getMaoEsquerda(){
+			return false;
+		}
+		public static boolean setMaoDireita(boolean direita){
+			return false;
+			
+		}
+		public static boolean setMaoEsquerda(boolean direita){
+			return false;
+			
+		}
+}
