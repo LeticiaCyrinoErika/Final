@@ -1,0 +1,31 @@
+
+public class CorpoACorpo extends Arma {
+
+
+	
+	CorpoACorpo(String nome, int danoMax, int durabilidade, boolean maoDireita, boolean maoEsquerda) {
+		super(nome, danoMax, durabilidade, maoDireita, maoEsquerda);
+	}
+
+
+	public int atacar() {
+		if (durabilidade ==0){
+			return 0;
+		}else {
+			durabilidade --;
+		}
+		return danoMax;
+	}
+
+	
+	public String usarArma() {
+		return ("Avançando em direção ao inimigo!");
+	}
+
+
+	public static boolean usaApenasUmaMao() {
+	
+		return true;
+	}
+
+}
