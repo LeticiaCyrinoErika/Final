@@ -1,0 +1,39 @@
+
+
+
+public class Personagem  {
+	private String nome;
+	private int maxHP;
+	private int HPAtual;
+
+	
+	Personagem (String nome, int maxHP){
+		
+	}
+	public void equiparArma(Arma a){
+		if((Arma.getMaoDireita())==false & (Arma.getMaoEsquerda())==false){
+			if((CorpoACorpo.usaApenasUmaMao())== true){
+				CorpoACorpo.setMaoDireita(true);
+			}else{
+				AtaqueADistancia.setMaoDireita(true);
+				AtaqueADistancia.setMaoEsquerda(true);
+			}
+			
+		}
+	}
+	public void sofrerDano (int dano){
+		HPAtual=HPAtual -dano;
+		if (getHP()==0){
+			System.out.print("Personagem faleceu. Tente voltar ao último save:");
+		}
+	}
+	
+	public int getHP(){
+		return HPAtual;
+		
+	}
+	public String status(){
+		return ("informaçoes do personagem:"+nome+"-"+HPAtual+"-"+maxHP+ "Informaçoes das armas:");
+	}
+
+}
