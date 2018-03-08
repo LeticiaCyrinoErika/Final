@@ -1,0 +1,29 @@
+
+public class AtaqueADistancia extends Arma {
+
+	AtaqueADistancia( int danoMax, int durabilidade, boolean maoDireita) {
+		super(nome, danoMax, durabilidade, maoDireita, maoDireita);
+		
+	}
+
+
+	public int atacar() {
+		if (durabilidade ==0){
+			return 0;
+		}else {
+			durabilidade --;
+		}
+		return danoMax;
+	}
+
+	public String usarArma() {
+		
+		return ( "Preparar, apontar, vai!");
+	}
+
+	
+	public boolean usaApenasUmaMao() {
+		return false;
+	}
+
+}
