@@ -1,0 +1,19 @@
+
+public class Teste {
+
+		p.equiparArma(opc1);
+	
+-		// cheque seus status
++		// cheque seu status
+		System.out.println(p.status());
+		
+		//receba um ataque com uma das armas
+		p.sofrerDano(opc3.atacar());
+		
+-		// cheque seus status para ver se o ataque funcionou
++		// cheque seu status para ver se o ataque funcionou
+		System.out.println(p.status());
+		
+		// agora, para dar gameover, tente sofrer vários ataques consecutivos
+}
+}
